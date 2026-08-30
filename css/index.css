@@ -6844,3 +6844,102 @@ blockquote.pullquote.right {
   .envelope-stage,
   .envelope-letter { transition: none; }
 }
+/* Local music player */
+.music-player-card {
+  display: grid;
+  max-width: 760px;
+  margin: 8px auto;
+  padding: clamp(22px, 4vw, 38px);
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: clamp(22px, 4vw, 38px);
+  align-items: center;
+  border: 1px solid rgba(127, 127, 127, .16);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(73, 177, 245, .16), transparent 34%),
+    var(--card-bg, #fff);
+  box-shadow: 0 14px 38px rgba(22, 43, 58, .1);
+}
+
+.music-disc {
+  position: relative;
+  width: 170px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #eaf7ff 0 8%, #3fa7dc 9% 15%, transparent 16%),
+    repeating-radial-gradient(circle, #18242c 0 3px, #263945 4px 7px);
+  box-shadow: 0 16px 28px rgba(19, 34, 44, .24);
+  transition: transform .5s ease;
+}
+
+.music-player-card:hover .music-disc {
+  transform: rotate(8deg);
+}
+
+.music-disc::after {
+  content: "♪";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  font-size: 1.35rem;
+  transform: translate(-50%, -54%);
+}
+
+.music-kicker {
+  margin: 0 0 4px;
+  color: var(--theme-color, #49b1f5);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+
+.music-track-title {
+  margin: 0;
+  color: var(--font-color, #4c4948);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1.3;
+}
+
+.music-track-author {
+  margin: 6px 0 18px;
+  color: var(--font-color, #4c4948);
+  font-size: .9rem;
+  opacity: .68;
+}
+
+.music-audio {
+  display: block;
+  width: 100%;
+  height: 46px;
+  accent-color: var(--theme-color, #49b1f5);
+}
+
+.music-license {
+  margin: 12px 0 0;
+  color: var(--font-color, #4c4948);
+  font-size: .75rem;
+  opacity: .65;
+}
+
+.music-license a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .music-player-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .music-disc {
+    width: 132px;
+    margin: 0 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .music-disc { transition: none; }
+}
