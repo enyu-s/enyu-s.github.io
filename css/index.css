@@ -226,6 +226,9 @@ template {
 #aside-content .card-widget,
 .layout .pagination > *:not(.space) {
   background: var(--card-bg);
+  -webkit-backdrop-filter: blur(14px) saturate(1.12);
+  backdrop-filter: blur(14px) saturate(1.12);
+  border: 1px solid var(--card-border);
   -webkit-box-shadow: var(--card-box-shadow);
   box-shadow: var(--card-box-shadow);
   -webkit-transition: all 0.3s;
@@ -1339,7 +1342,8 @@ canvas:not(#ribbon-canvas),
   --tab-botton-color: #1f2d3d;
   --tab-button-hover-bg: #dcdcdc;
   --tab-button-active-bg: #fff;
-  --card-bg: #fff;
+  --card-bg: rgba(255,255,255,0.76);
+  --card-border: rgba(255,255,255,0.34);
   --card-meta: #858585;
   --sidebar-bg: #f6f8fa;
   --sidebar-menu-bg: #fff;
@@ -6210,7 +6214,8 @@ blockquote.pullquote.right {
   --tab-botton-color: rgba(255,255,255,0.7);
   --tab-button-hover-bg: #383838;
   --tab-button-active-bg: #121212;
-  --card-bg: #121212;
+  --card-bg: rgba(18,18,18,0.78);
+  --card-border: rgba(255,255,255,0.1);
   --sidebar-bg: #121212;
   --sidebar-menu-bg: #1f1f1f;
   --btn-hover-color: #787878;
