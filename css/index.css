@@ -6769,3 +6769,87 @@ blockquote.pullquote.right {
 @media (prefers-reduced-motion: reduce) {
   .music-disc { transition: none; }
 }
+
+/* Daily quote card */
+.card-daily-quote .item-headline i {
+  color: var(--theme-color, #49b1f5);
+}
+
+.daily-quote {
+  display: grid;
+  gap: 8px;
+  line-height: 1.75;
+}
+
+.daily-quote-text {
+  text-wrap: pretty;
+}
+
+.daily-quote cite {
+  justify-self: end;
+  font-size: .78rem;
+  font-style: normal;
+  opacity: .64;
+}
+
+/* Small series navigator shared by post pages */
+.post-series {
+  margin-top: 28px;
+  padding: 18px 20px;
+  border: 1px solid rgba(73, 177, 245, .2);
+  border-radius: 16px;
+  background: rgba(73, 177, 245, .07);
+}
+
+.post-series h2 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.post-series ol {
+  margin: 0;
+  padding-left: 1.4em;
+}
+
+.post-series li + li { margin-top: 6px; }
+.post-series .is-current { font-weight: 700; }
+
+/* Travel footprint page; global so PJAX navigation keeps the styling. */
+.footprints-map {
+  position: relative;
+  overflow: hidden;
+  margin: 4px auto;
+  padding: clamp(16px, 3vw, 28px);
+  border: 1px solid rgba(73, 177, 245, .2);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(73, 177, 245, .13), rgba(255, 255, 255, .08));
+}
+
+.footprints-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: .78;
+  filter: drop-shadow(0 12px 22px rgba(25, 72, 102, .12));
+}
+
+[data-theme='dark'] .footprints-map img {
+  filter: invert(.82) sepia(.08) hue-rotate(165deg) drop-shadow(0 12px 22px rgba(0, 0, 0, .2));
+}
+
+.footprints-empty {
+  margin: 18px 0 2px;
+  text-align: center;
+  opacity: .62;
+}
+
+.footprints-credit {
+  margin: 8px 0 0;
+  text-align: center;
+  font-size: .72rem;
+  opacity: .5;
+}
+
+@media (max-width: 600px) {
+  .footprints-map { border-radius: 16px; }
+}
