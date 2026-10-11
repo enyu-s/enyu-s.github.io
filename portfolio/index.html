@@ -185,6 +185,13 @@
     color:#e6e8ee;max-width:42ch;
     text-shadow:0 1px 12px rgba(0,0,0,.6),0 1px 2px rgba(0,0,0,.5);
   }
+  .hero-tagline{min-height:3.2em;line-height:1.6;}
+  .tagline-accessible{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;}
+  .tagline-cursor{display:inline-block;margin-left:.12em;color:var(--pop);}
+  @media (prefers-reduced-motion: no-preference){
+    .tagline-cursor{animation:tagline-blink 1s step-end infinite;}
+  }
+  @keyframes tagline-blink{50%{opacity:0;}}
   .scrollcue{
     position:absolute;z-index:2;bottom:34px;
     left:calc(var(--nav-w) + 16px);
@@ -509,9 +516,8 @@
       <h1>
         <span class="line"><span class="word">产品经理</span></span>
         <span class="line" style="color: var(--pop);"><span class="word">个人作品集</span></span>
-        <span class="line"><span class="word">八九</span></span>
       </h1>
-      <p class="hero-sub"></p>
+      <p class="hero-sub hero-tagline"><span class="tagline-accessible">Turning AI into meaningful products.</span><span id="portfolio-tagline" aria-hidden="true">Turning AI into meaningful products.</span><span class="tagline-cursor" aria-hidden="true">|</span></p>
     </div>
     <div class="scrollcue" aria-hidden="true">
       <span class="ln"></span><span>Scroll</span>
@@ -779,4 +785,5 @@
 
 
 
+<script src="/portfolio/tagline.js"></script>
 </body></html>

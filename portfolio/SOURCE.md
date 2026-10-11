@@ -11,6 +11,9 @@ are retained. Local changes translate section labels, set the author to 八九,
 use a green accent, fix metadata and the favicon path, and add links back to
 the blog. All example biography, projects, achievements, photos, résumé and
 contact details are removed. Empty sections await author-provided content.
+The hero's author line is replaced by a smaller, rotating typewriter slogan
+using author-provided wording. `tagline.js` implements this effect without
+additional dependencies and keeps a static slogan for reduced motion.
 
 This page is served at `/portfolio/` as static HTML. It uses a full page
 navigation when entered from Butterfly so its styles and scripts load in
