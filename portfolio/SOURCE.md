@@ -16,7 +16,7 @@ using author-provided wording. `tagline.js` implements this effect without
 additional dependencies and keeps a static slogan for reduced motion.
 The hero also displays the author-provided `avatar.png` with the caption
 `Shi Enyu`: beside the headline on desktop and underneath it on mobile.
-A soft green mouse spotlight illuminates the background using a CSS radial
+A soft neutral gray mouse spotlight illuminates the background using a CSS radial
 gradient and `spotlight.js`. It batches pointer updates per animation frame,
 leaves content and links above the effect, and is disabled for touch input
 and reduced motion preferences.
