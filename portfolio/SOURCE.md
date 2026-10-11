@@ -22,6 +22,9 @@ A soft neutral gray mouse spotlight illuminates the background using a CSS radia
 gradient and `spotlight.js`. It batches pointer updates per animation frame,
 leaves content and links above the effect, and is disabled for touch input
 and reduced motion preferences.
+The footer includes the author's supplied phone number and email on the
+left, and links to the personal blog and GitHub profile on the right.
+The columns stack vertically on small screens.
 
 This page is served at `/portfolio/` as static HTML. It uses a full page
 navigation when entered from Butterfly so its styles and scripts load in

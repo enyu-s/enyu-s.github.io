@@ -413,7 +413,10 @@
 
   /* footer */
   footer{margin-left:var(--nav-w);background:var(--panel);padding:54px 0;border-top:1px solid var(--line);}
-  .foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;}
+  .foot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;}
+  .footer-contact{font-style:normal;font-size:16px;line-height:1.8;}
+  .footer-contact .contact-label{margin-bottom:8px;font-size:13px;color:var(--muted);}
+  .footer-contact a{overflow-wrap:anywhere;}
   footer .big{
     font-family:var(--display);font-weight:800;
     font-size:clamp(26px,3vw,40px);letter-spacing:-.02em;line-height:1.08;
@@ -421,6 +424,11 @@
   footer .big a{color:var(--pop);text-decoration:none;}
   footer .meta{font-size:13px;color:var(--muted);text-align:right;}
   footer .meta a{color:var(--ink);}
+  footer .meta p+p{margin-top:8px;}
+  @media (max-width:600px){
+    .foot-grid{grid-template-columns:1fr;}
+    footer .meta{text-align:left;}
+  }
 
   /* ---- motion, gated behind reduced-motion preference ---- */
   @media (prefers-reduced-motion: no-preference){
@@ -637,8 +645,16 @@
 <footer>
   <div class="inner">
     <div class="foot-grid">
-      <p class="big"></p>
-      <div class="meta"><p><a href="/">个人博客 ↗</a></p><p class="credit" style="margin-top:14px;font-size:12px;">Created by <a href="https://benjaminmullins.tv" target="_blank" rel="noopener">benjaminmullins.tv</a> — used with permission.</p></div>
+      <address class="footer-contact" aria-label="联系方式">
+        <p class="contact-label">联系方式</p>
+        <p><a href="tel:+8619035059857">+86 19035059857</a></p>
+        <p><a href="mailto:3302789397@qq.com">3302789397@qq.com</a></p>
+      </address>
+      <div class="meta">
+        <p><a href="/">个人博客 ↗</a></p>
+        <p><a href="https://github.com/enyu-s" target="_blank" rel="noopener">GitHub 主页 ↗</a></p>
+        <p class="credit" style="margin-top:14px;font-size:12px;">Created by <a href="https://benjaminmullins.tv" target="_blank" rel="noopener">benjaminmullins.tv</a> — used with permission.</p>
+      </div>
     </div>
   </div>
 </footer>
