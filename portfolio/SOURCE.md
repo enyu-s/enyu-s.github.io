@@ -22,8 +22,8 @@ keep the portrait inside its own column, aligned to the container's right
 edge. Desktop top spacing follows the viewport height, with limits for
 short and tall screens. Narrow viewports stack the content without
 horizontal offsets and retain their existing top spacing.
-Below the hero, section containers align to the left of the main content
-on desktop, retaining a responsive gutter and the existing mobile spacing.
+Below the hero, section containers use the same desktop width and gutters
+as the hero, aligning all headings with the headline. Mobile spacing is retained.
 A soft neutral gray mouse spotlight illuminates the background using a CSS radial
 gradient and `spotlight.js`. It batches pointer updates per animation frame,
 leaves content and links above the effect, and is disabled for touch input
