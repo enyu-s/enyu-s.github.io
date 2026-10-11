@@ -19,6 +19,8 @@ The hero also displays the author-provided `avatar.png` with the caption
 The hero uses a centered content container and proportional grid columns
 for the headline and portrait. The portrait stays inside its own column;
 narrow viewports stack the content without horizontal offsets.
+Below the hero, section containers align to the left of the main content
+on desktop, retaining a responsive gutter and the existing mobile spacing.
 A soft neutral gray mouse spotlight illuminates the background using a CSS radial
 gradient and `spotlight.js`. It batches pointer updates per animation frame,
 leaves content and links above the effect, and is disabled for touch input
