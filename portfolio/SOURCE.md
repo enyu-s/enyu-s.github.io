@@ -16,10 +16,11 @@ using author-provided wording. `tagline.js` implements this effect without
 additional dependencies and keeps a static slogan for reduced motion.
 The hero also displays the author-provided `avatar.png` with the caption
 `Shi Enyu`: beside the headline on desktop and underneath it on mobile.
-The hero aligns its headline with the section headings and uses proportional
-grid columns for the headline and portrait. Its desktop top spacing follows
-the viewport height, with limits for short and tall screens. The portrait
-stays inside its own column; narrow viewports stack the content without
+The hero centers within the main area excluding the sidebar, with matching
+outer margins for the headline and portrait. Proportional grid columns
+keep the portrait inside its own column, aligned to the container's right
+edge. Desktop top spacing follows the viewport height, with limits for
+short and tall screens. Narrow viewports stack the content without
 horizontal offsets and retain their existing top spacing.
 Below the hero, section containers align to the left of the main content
 on desktop, retaining a responsive gutter and the existing mobile spacing.
