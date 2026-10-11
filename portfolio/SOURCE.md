@@ -14,6 +14,8 @@ contact details are removed. Empty sections await author-provided content.
 The hero's author line is replaced by a smaller, rotating typewriter slogan
 using author-provided wording. `tagline.js` implements this effect without
 additional dependencies and keeps a static slogan for reduced motion.
+The hero also displays the author-provided `avatar.png` with the caption
+`Shi Enyu`: beside the headline on desktop and underneath it on mobile.
 
 This page is served at `/portfolio/` as static HTML. It uses a full page
 navigation when entered from Butterfly so its styles and scripts load in

@@ -165,10 +165,19 @@
   }
   .hero .inner{
     position:relative;z-index:2;max-width:none;margin:0;width:100%;
+    display:grid;grid-template-columns:minmax(0,1fr) clamp(240px,26vw,360px);
+    gap:clamp(32px,5vw,80px);align-items:start;
     padding-top:clamp(96px,19vh,220px);
     padding-left:calc(var(--nav-w) + 16px);padding-right:56px;
   }
   .hero .eyebrow{margin-bottom:24px;}
+  .hero-copy{min-width:0;}
+  .hero-portrait{margin:0;text-align:center;}
+  .hero-portrait img{
+    display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;
+    border-radius:26px;border:1px solid var(--line);
+  }
+  .hero-portrait figcaption{margin-top:20px;font-size:24px;letter-spacing:.04em;color:var(--ink);}
   h1{
     font-family:var(--display);font-weight:800;
     font-size:clamp(38px,6vw,80px);line-height:1.04;letter-spacing:-.035em;
@@ -471,6 +480,9 @@
       background:linear-gradient(180deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.55) 32%,rgba(0,0,0,0) 66%);
     }
     .hero .inner{padding-top:clamp(56px,9vh,96px);padding-left:24px;padding-right:24px;}
+    .hero .inner{grid-template-columns:1fr;gap:28px;padding-bottom:110px;}
+    .hero-portrait{width:min(280px,100%);justify-self:center;}
+    .hero-portrait figcaption{margin-top:16px;font-size:22px;}
     br.mb{display:initial;}
     h1{font-size:clamp(46px,13vw,66px);}
     .scrollcue{left:24px;}
@@ -509,15 +521,19 @@
 
   <!-- ====== home / hero ====== -->
   <section class="hero" id="home">
-    <!-- Swap this placeholder for your own portrait or hero art. -->
-
     <div class="hero__scrim" aria-hidden="true"></div>
     <div class="inner">
+      <div class="hero-copy">
       <h1>
         <span class="line"><span class="word">产品经理</span></span>
         <span class="line" style="color: var(--pop);"><span class="word">个人作品集</span></span>
       </h1>
       <p class="hero-sub hero-tagline"><span class="tagline-accessible">Turning AI into meaningful products.</span><span id="portfolio-tagline" aria-hidden="true">Turning AI into meaningful products.</span><span class="tagline-cursor" aria-hidden="true">|</span></p>
+      </div>
+      <figure class="hero-portrait">
+        <img src="/portfolio/avatar.png" width="1080" height="1080" alt="Shi Enyu 的头像：戴墨镜、拿着咖啡的卡通熊" decoding="async" fetchpriority="high">
+        <figcaption>Shi Enyu</figcaption>
+      </figure>
     </div>
     <div class="scrollcue" aria-hidden="true">
       <span class="ln"></span><span>Scroll</span>
