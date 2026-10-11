@@ -6771,6 +6771,76 @@ blockquote.pullquote.right {
 }
 
 /* Daily quote card */
+/* Collection styles stay global for navigation through PJAX. */
+#collections { scroll-margin-top: 90px; }
+.collections-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0 4px 18px;
+  color: var(--font-color);
+}
+.collections-heading h2 { margin: 0; font-size: 1.45rem; }
+.collections-heading > span { font-size: .85rem; opacity: .7; }
+.collection-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.collection-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 230px;
+  padding: clamp(22px, 3vw, 32px);
+  border: 1px solid rgba(127, 127, 127, .18);
+  border-radius: 16px;
+  background: var(--card-bg);
+  color: var(--font-color);
+  box-shadow: var(--card-box-shadow);
+  backdrop-filter: blur(12px);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.collection-card:hover { transform: translateY(-4px); box-shadow: var(--card-hover-box-shadow); }
+.collection-card:focus-visible, .collection-breadcrumb a:focus-visible {
+  outline: 3px solid #49b1f5;
+  outline-offset: 4px;
+}
+.collection-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(73, 177, 245, .12);
+  color: #49b1f5;
+  font-size: 1.2rem;
+}
+.collection-card h3 { margin: 16px 0 4px; color: inherit; font-size: 1.15rem; line-height: 1.55; }
+.collection-kind { font-size: .82rem; opacity: .7; }
+.collection-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 22px;
+  font-size: .85rem;
+}
+.collection-card-footer > span:last-child { font-size: 1.25rem; color: #49b1f5; }
+.collection-card-portfolio { border-color: rgba(73, 177, 245, .4); }
+.collection-breadcrumb { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; font-size: .9rem; }
+.collection-breadcrumb a { color: #49b1f5; }
+.collection-empty { display: grid; place-content: center; min-height: 240px; text-align: center; opacity: .65; }
+.collection-empty > i { font-size: 2rem; color: #49b1f5; }
+.collection-empty p { margin-top: 18px; }
+@media (max-width: 600px) {
+  .collection-grid { grid-template-columns: 1fr; gap: 16px; }
+  .collection-card { min-height: 210px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .collection-card { transition: none; }
+  .collection-card:hover { transform: none; }
+}
+
 .card-daily-quote .item-headline i {
   color: var(--theme-color, #49b1f5);
 }
