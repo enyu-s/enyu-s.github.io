@@ -242,6 +242,37 @@
   .seeall:hover{color:var(--pop);}
 
   /* ---- generic blocks ---- */
+  .experience{
+    display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);
+    gap:clamp(32px,5vw,72px);margin-top:48px;padding-top:40px;
+    border-top:1px solid var(--line);
+  }
+  .experience-summary{min-width:0;}
+  .experience-date{font-size:14px;letter-spacing:.04em;color:var(--pop);}
+  .experience-company{
+    margin-top:24px;font-family:var(--display);font-size:clamp(28px,3.4vw,44px);
+    font-weight:800;line-height:1.25;letter-spacing:-.02em;
+  }
+  .experience-role{margin-top:24px;font-size:18px;font-weight:600;}
+  .experience-details{
+    position:relative;min-width:0;border-left:1px solid var(--line);
+    padding-left:clamp(24px,3vw,48px);
+  }
+  .experience-details::before{
+    content:"";position:absolute;left:-1px;top:0;width:2px;height:48px;background:var(--pop);
+  }
+  .experience-detail h4{display:flex;gap:10px;font-size:20px;line-height:1.4;}
+  .experience-detail h4::before{
+    content:"";width:5px;height:5px;flex:none;border-radius:50%;
+    margin-top:.6em;background:var(--pop);
+  }
+  .experience-detail p{margin-top:14px;font-size:16px;line-height:1.9;color:#aab0bd;}
+  .experience-detail + .experience-detail{margin-top:28px;padding-top:28px;border-top:1px solid var(--line);}
+  @media (max-width:900px){
+    .experience{grid-template-columns:1fr;gap:32px;margin-top:36px;padding-top:28px;}
+    .experience-company{font-size:clamp(28px,6vw,36px);}
+    .experience-details{padding-left:24px;}
+  }
   .bio{font-size:clamp(17px,1.65vw,20px);line-height:1.65;max-width:64ch;margin:0 0 1.4em 0;}
   .bio:last-of-type{margin-bottom:0;}
   .bio .hl{color:var(--pop);}
@@ -588,7 +619,23 @@
           <h2 class="sec-title" id="thinking-h">履历</h2>
         </div>
       </div>
-      <div class="cards"></div>
+      <article class="experience reveal" aria-labelledby="experience-guojiao">
+        <div class="experience-summary">
+          <p class="experience-date"><time datetime="2026-07">2026.07</time> — <time datetime="2026-09">2026.09</time></p>
+          <h3 class="experience-company" id="experience-guojiao">国交空间信息科技有限公司</h3>
+          <p class="experience-role">项目实习生</p>
+        </div>
+        <div class="experience-details">
+          <div class="experience-detail">
+            <h4>需求梳理与原型设计</h4>
+            <p>梳理业务需求，撰写需求文档，原型设计。</p>
+          </div>
+          <div class="experience-detail">
+            <h4>甲方对接与会议纪要</h4>
+            <p>与甲方对接，确认业务重点、展示内容和填报要求，负责项目会议纪要整理。</p>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 

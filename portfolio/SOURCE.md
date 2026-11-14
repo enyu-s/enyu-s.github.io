@@ -32,6 +32,11 @@ The footer includes the author's supplied phone number and email on the
 left, and links to the personal blog and GitHub profile on the right.
 The footer shares the section container width and gutters, aligning contact
 details with the Contact heading. The columns stack vertically on small screens.
+The Background section includes the author's supplied July–September 2026
+project internship at 国交空间信息科技有限公司. Company, dates, and role sit
+beside the supplied responsibilities, separated by a timeline-style rule;
+the entry stacks on mobile. No location, metrics, or additional achievements
+are inferred from the reference screenshot.
 
 This page is served at `/portfolio/` as static HTML. It uses a full page
 navigation when entered from Butterfly so its styles and scripts load in
