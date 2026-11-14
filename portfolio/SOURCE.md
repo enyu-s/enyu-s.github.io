@@ -41,6 +41,12 @@ skills, awards, and campus entries use restrained editorial lists. All layouts
 stack on narrow screens. Section hierarchy and project presentation reference
 [liujialinai.com](https://liujialinai.com/#experience); no biography, project
 results, metrics, screenshots, or code were copied from that site.
+CareFollow is an author-supplied personal project with direct patient and
+doctor application links. `carefollow/patient.png` and `carefollow/doctor.png`
+are browser screenshots captured from the supplied public application URLs.
+`carefollow-preview.js` provides accessible click and keyboard switching
+between the screenshots. Project capabilities and stack follow the supplied
+description; no project date or personal role has been inferred.
 
 This page is served at `/portfolio/` as static HTML. It uses a full page
 navigation when entered from Butterfly so its styles and scripts load in

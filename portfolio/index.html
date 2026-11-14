@@ -272,6 +272,34 @@
   .experience-context strong{color:var(--pop);font-weight:600;}
   .project-award{display:inline-block;margin-top:20px;padding:6px 12px;border:1px solid var(--line);border-radius:6px;color:var(--pop);font-size:13px;line-height:1.7;}
   .project-brief{margin-top:20px;font-size:16px;line-height:1.9;color:#aab0bd;}
+  .care-project{margin-top:48px;padding-top:40px;border-top:1px solid var(--line);}
+  .care-project .experience{border:0;padding-top:0;margin-top:0;}
+  .care-stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;list-style:none;}
+  .care-stack li{padding:5px 10px;border:1px solid var(--line);border-radius:6px;font-size:12px;color:#c7cbd4;}
+  .care-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;}
+  .care-actions a{display:inline-flex;padding:10px 16px;border:1px solid var(--line);border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;}
+  .care-actions a:first-child{background:var(--pop);color:#101509;border-color:var(--pop);}
+  .care-actions a:hover{border-color:var(--pop);}
+  .care-preview{margin-top:32px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--panel);}
+  .care-preview-bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding:18px 20px;border-bottom:1px solid var(--line);}
+  .care-tabs{display:flex;gap:8px;}
+  .care-tabs button{font:inherit;font-size:14px;padding:9px 16px;border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--muted);cursor:pointer;}
+  .care-tabs button[aria-selected="true"]{background:var(--pop);color:#101509;border-color:var(--pop);}
+  .care-preview-hint{font-size:12px;color:var(--muted);}
+  .care-preview-panel[hidden]{display:none;}
+  .care-preview-link{display:block;text-decoration:none;}
+  .care-preview-image{display:flex;align-items:center;justify-content:center;height:clamp(360px,48vw,640px);padding:20px;background:#eaf0f2;overflow:hidden;}
+  .care-preview-image img{display:block;width:100%;height:100%;object-fit:contain;transition:transform .25s ease;}
+  .care-preview-link:hover img{transform:scale(1.015);}
+  .care-preview-caption{display:flex;justify-content:space-between;gap:16px;padding:16px 20px;font-size:14px;color:#c7cbd4;}
+  .care-preview-caption span:last-child{color:var(--pop);white-space:nowrap;}
+  @media (prefers-reduced-motion:reduce){.care-preview-image img{transition:none;}.care-preview-link:hover img{transform:none;}}
+  @media (max-width:600px){
+    .care-preview-bar{padding:14px;gap:12px;}
+    .care-preview-caption{padding:14px;flex-direction:column;gap:8px;}
+    .care-preview-image{height:auto;padding:10px;}
+    .care-preview-image img{height:auto;}
+  }
   .skill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 56px;}
   .skill-item{min-width:0;padding:28px 0;border-top:1px solid var(--line);}
   .skill-item h3{font-size:22px;line-height:1.4;}
@@ -707,6 +735,44 @@
           <h2 class="sec-title" id="work-h">项目经历</h2>
         </div>
       </div>
+      <article class="care-project" aria-labelledby="project-carefollow">
+        <div class="experience">
+          <div class="experience-summary reveal">
+            <p class="experience-date">个人项目 · 医患双端协同</p>
+            <h3 class="experience-company" id="project-carefollow">CareFollow</h3>
+            <p class="experience-role">医患双端协同 AI 个人健康助手</p>
+            <p class="project-brief">面向体重与血糖管理场景的智能健康管理应用，旨在解决患者日常健康数据分散、医生诊后随访效率低等问题。</p>
+            <ul class="care-stack" aria-label="CareFollow 技术栈"><li>React</li><li>Next.js</li><li>TypeScript</li><li>PWA</li><li>YOLO</li><li>TCN</li><li>AI Agent</li></ul>
+            <div class="care-actions"><a href="https://care.enyus.xyz/patient" target="_blank" rel="noopener noreferrer">体验患者端 ↗</a><a href="https://care.enyus.xyz/doctor" target="_blank" rel="noopener noreferrer">体验医生端 ↗</a></div>
+          </div>
+          <div class="experience-details">
+            <div class="experience-detail reveal"><h4>多模态健康记录</h4><p>基于 React、Next.js 和 TypeScript 构建患者端 PWA 与医生端管理平台，融合 YOLO 餐食图像识别，实现多模态健康数据记录。</p></div>
+            <div class="experience-detail reveal"><h4>智能分析与趋势提醒</h4><p>融合 TCN 健康指标时序预测及情境感知 AI Agent，提供个性化健康建议与异常趋势提醒。</p></div>
+            <div class="experience-detail reveal"><h4>医患协同与持续随访</h4><p>支持医患实时沟通及随访管理，形成“健康记录—智能分析—专业干预—持续随访”的完整闭环。</p></div>
+          </div>
+        </div>
+        <div class="care-preview" id="carefollow-preview">
+          <div class="care-preview-bar">
+            <div class="care-tabs" role="tablist" aria-label="CareFollow 双端截图">
+              <button type="button" id="care-tab-patient" role="tab" aria-selected="true" aria-controls="care-panel-patient">患者端</button>
+              <button type="button" id="care-tab-doctor" role="tab" aria-selected="false" aria-controls="care-panel-doctor" tabindex="-1">医生端</button>
+            </div>
+            <p class="care-preview-hint">切换双端预览 · 点击截图打开应用</p>
+          </div>
+          <div class="care-preview-panel" id="care-panel-patient" role="tabpanel" aria-labelledby="care-tab-patient">
+            <a class="care-preview-link" href="https://care.enyus.xyz/patient" target="_blank" rel="noopener noreferrer" aria-label="打开 CareFollow 患者端（新标签页）">
+              <div class="care-preview-image"><img src="/portfolio/carefollow/patient.png" width="430" height="932" loading="lazy" decoding="async" alt="CareFollow 患者端健康首页，展示体重管理、血糖趋势和饮食记录"></div>
+              <p class="care-preview-caption"><span>患者端 PWA · 健康记录与智能分析</span><span>打开患者端 ↗</span></p>
+            </a>
+          </div>
+          <div class="care-preview-panel care-preview-panel--doctor" id="care-panel-doctor" role="tabpanel" aria-labelledby="care-tab-doctor" hidden>
+            <a class="care-preview-link" href="https://care.enyus.xyz/doctor" target="_blank" rel="noopener noreferrer" aria-label="打开 CareFollow 医生端（新标签页）">
+              <div class="care-preview-image"><img src="/portfolio/carefollow/doctor.png" width="1440" height="1000" loading="lazy" decoding="async" alt="CareFollow 医生工作台，展示优先队列、预警、今日安排与患者分层"></div>
+              <p class="care-preview-caption"><span>医生端工作台 · 专业干预与随访管理</span><span>打开医生端 ↗</span></p>
+            </a>
+          </div>
+        </div>
+      </article>
       <article class="experience" aria-labelledby="project-legal">
         <div class="experience-summary reveal">
           <p class="experience-date"><time datetime="2026-03">2026.03</time> — <time datetime="2026-08">2026.08</time></p>
@@ -972,4 +1038,5 @@
 
 <script src="/portfolio/tagline.js"></script>
 <script src="/portfolio/spotlight.js"></script>
+<script src="/portfolio/carefollow-preview.js"></script>
 </body></html>
