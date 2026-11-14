@@ -32,17 +32,22 @@ The footer includes the author's supplied phone number and email on the
 left, and links to the personal blog and GitHub profile on the right.
 The footer shares the section container width and gutters, aligning contact
 details with the Contact heading. The columns stack vertically on small screens.
-The Background section includes the author's supplied July–September 2026
-project internship at 国交空间信息科技有限公司. Company, dates, and role sit
-beside the supplied responsibilities, separated by a timeline-style rule;
-the entry stacks on mobile. No location, metrics, or additional achievements
-are inferred from the reference screenshot.
+Resume content is supplied by the author: education at 海南大学, professional
+skills, the July–September 2026 internship at 国交空间信息科技有限公司, two
+projects, five competition awards, and campus work and honors. The internship
+now identifies the 海南海事局三沙大屏系统项目 and its supplied responsibilities.
+Education, experience, and projects use two columns with timeline-style rules;
+skills, awards, and campus entries use restrained editorial lists. All layouts
+stack on narrow screens. Section hierarchy and project presentation reference
+[liujialinai.com](https://liujialinai.com/#experience); no biography, project
+results, metrics, screenshots, or code were copied from that site.
 
 This page is served at `/portfolio/` as static HTML. It uses a full page
 navigation when entered from Butterfly so its styles and scripts load in
 their own document. The GitHub Pages workflow continues to publish the
 repository root without a build step.
 
-To add actual projects, use the template's `.csgrid` / `.cscard` structure
-under `#work` and link to the real case-study pages. No sample case studies,
-demo password gate or placeholder résumé are published.
+To add further projects, use the existing `.experience` / `.experience-details`
+structure under `#work`. Add screenshots or case-study links only when the
+author supplies them. No sample case studies, demo password gate, or
+placeholder résumé are published.

@@ -268,10 +268,34 @@
   }
   .experience-detail p{margin-top:14px;font-size:16px;line-height:1.9;color:#aab0bd;}
   .experience-detail + .experience-detail{margin-top:28px;padding-top:28px;border-top:1px solid var(--line);}
+  .experience-context{margin-top:18px;font-size:16px;line-height:1.8;color:#aab0bd;}
+  .experience-context strong{color:var(--pop);font-weight:600;}
+  .project-award{display:inline-block;margin-top:20px;padding:6px 12px;border:1px solid var(--line);border-radius:6px;color:var(--pop);font-size:13px;line-height:1.7;}
+  .project-brief{margin-top:20px;font-size:16px;line-height:1.9;color:#aab0bd;}
+  .skill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 56px;}
+  .skill-item{min-width:0;padding:28px 0;border-top:1px solid var(--line);}
+  .skill-item h3{font-size:22px;line-height:1.4;}
+  .skill-item p{margin-top:14px;font-size:16px;line-height:1.9;color:#aab0bd;}
+  .skill-item .skill-tools{color:var(--pop);font-size:18px;}
+  .award-list{list-style:none;border-top:1px solid var(--line);}
+  .award-item{display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:24px;align-items:start;padding:28px 0;border-bottom:1px solid var(--line);}
+  .award-number{color:var(--pop);font-size:13px;letter-spacing:.08em;padding-top:5px;}
+  .award-item h3{font-size:20px;font-weight:600;line-height:1.6;}
+  .award-level{font-size:15px;color:var(--pop);line-height:1.8;white-space:nowrap;padding-top:3px;}
+  .campus-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px;}
+  .campus-group{min-width:0;border-top:1px solid var(--line);padding-top:28px;}
+  .campus-group h3{font-size:22px;margin-bottom:20px;}
+  .campus-list{list-style:none;}
+  .campus-list li{padding:18px 0;border-bottom:1px solid var(--line);font-size:16px;line-height:1.8;color:#aab0bd;}
+  .campus-list strong{display:block;font-weight:600;color:var(--ink);}
   @media (max-width:900px){
     .experience{grid-template-columns:1fr;gap:32px;margin-top:36px;padding-top:28px;}
     .experience-company{font-size:clamp(28px,6vw,36px);}
     .experience-details{padding-left:24px;}
+    .skill-grid,.campus-grid{grid-template-columns:1fr;gap:0;}
+    .campus-group + .campus-group{margin-top:32px;}
+    .award-item{grid-template-columns:24px minmax(0,1fr);gap:8px 16px;padding:24px 0;}
+    .award-level{grid-column:2;white-space:normal;}
   }
   .bio{font-size:clamp(17px,1.65vw,20px);line-height:1.65;max-width:64ch;margin:0 0 1.4em 0;}
   .bio:last-of-type{margin-bottom:0;}
@@ -561,10 +585,12 @@
 
 
   <div class="nav">
-    <a href="#who"><span class="led" aria-hidden="true"></span><span>介绍</span></a>
-    <a href="#thinking"><span class="led" aria-hidden="true"></span><span>履历</span></a>
-    <a href="#lab"><span class="led" aria-hidden="true"></span><span>能力</span></a>
-    <a href="#work"><span class="led" aria-hidden="true"></span><span>作品</span></a>
+    <a href="#who"><span class="led" aria-hidden="true"></span><span>教育</span></a>
+    <a href="#thinking"><span class="led" aria-hidden="true"></span><span>实习</span></a>
+    <a href="#lab"><span class="led" aria-hidden="true"></span><span>技能</span></a>
+    <a href="#work"><span class="led" aria-hidden="true"></span><span>项目</span></a>
+    <a href="#awards"><span class="led" aria-hidden="true"></span><span>竞赛</span></a>
+    <a href="#campus"><span class="led" aria-hidden="true"></span><span>校园</span></a>
     <a href="#personal"><span class="led" aria-hidden="true"></span><span>联系</span></a>
   </div>
 
@@ -599,14 +625,28 @@
     <div class="inner">
       <div class="sec-head reveal">
         <div>
-          <p class="eyebrow">INTRODUCTION</p>
-          <h2 class="sec-title" id="who-h">介绍</h2>
+          <p class="eyebrow">EDUCATION</p>
+          <h2 class="sec-title" id="who-h">教育背景</h2>
         </div>
       </div>
-
-
-
-
+      <article class="experience reveal" aria-labelledby="education-hainan">
+        <div class="experience-summary">
+          <p class="experience-date"><time datetime="2024-09">2024.09</time> — <time datetime="2028-06">2028.06</time></p>
+          <h3 class="experience-company" id="education-hainan">海南大学（211）</h3>
+          <p class="experience-role">本科 · 密码科学与技术</p>
+          <p class="experience-context">网络空间安全学院</p>
+        </div>
+        <div class="experience-details">
+          <div class="experience-detail">
+            <h4>专业学习</h4>
+            <p>专业排名<strong style="color:var(--pop);">前 20%</strong>。</p>
+          </div>
+          <div class="experience-detail">
+            <h4>主修课程</h4>
+            <p>数据结构、计算机网络原理、操作系统、计算机组成原理、软件工程及安全编码。</p>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -616,7 +656,7 @@
       <div class="sec-head reveal">
         <div>
           <p class="eyebrow">BACKGROUND</p>
-          <h2 class="sec-title" id="thinking-h">履历</h2>
+          <h2 class="sec-title" id="thinking-h">实习经历</h2>
         </div>
       </div>
       <article class="experience reveal" aria-labelledby="experience-guojiao">
@@ -624,15 +664,16 @@
           <p class="experience-date"><time datetime="2026-07">2026.07</time> — <time datetime="2026-09">2026.09</time></p>
           <h3 class="experience-company" id="experience-guojiao">国交空间信息科技有限公司</h3>
           <p class="experience-role">项目实习生</p>
+          <p class="experience-context">海南海事局三沙大屏系统项目</p>
         </div>
         <div class="experience-details">
           <div class="experience-detail">
             <h4>需求梳理与原型设计</h4>
-            <p>梳理业务需求，撰写需求文档，原型设计。</p>
+            <p>依据三沙海事局日常监管需要，梳理大屏业务需求，明确船舶运营、巡航执法、重点工作、人员值守等展示内容，撰写需求文档，进行原型设计。</p>
           </div>
           <div class="experience-detail">
             <h4>甲方对接与会议纪要</h4>
-            <p>与甲方对接，确认业务重点、展示内容和填报要求，负责项目会议纪要整理。</p>
+            <p>与三沙海事局领导对接，确认业务重点、展示内容和填报要求，负责项目会议纪要整理。</p>
           </div>
         </div>
       </article>
@@ -645,10 +686,15 @@
       <div class="sec-head reveal">
         <div>
           <p class="eyebrow">CAPABILITIES</p>
-          <h2 class="sec-title" id="lab-h">能力</h2>
+          <h2 class="sec-title" id="lab-h">专业技能</h2>
         </div>
       </div>
-      <div class="cards" style="margin-top:30px;"></div>
+      <div class="skill-grid">
+        <article class="skill-item reveal"><h3>开发语言</h3><p class="skill-tools">Python · C++ · SQL</p></article>
+        <article class="skill-item reveal"><h3>AI 应用</h3><p>熟悉大模型 API 调用、智能体工作流、RAG、上下文管理和知识库搭建。</p></article>
+        <article class="skill-item reveal"><h3>项目协作</h3><p>需求分析、原型设计、敏捷开发协作、项目方案、技术文档。</p></article>
+        <article class="skill-item reveal"><h3>AI 开发工具</h3><p class="skill-tools">Codex · Claude Code</p></article>
+      </div>
     </div>
   </section>
 
@@ -658,17 +704,65 @@
       <div class="sec-head reveal">
         <div>
           <p class="eyebrow">SELECTED WORK</p>
-          <h2 class="sec-title" id="work-h">作品</h2>
+          <h2 class="sec-title" id="work-h">项目经历</h2>
         </div>
-        <!-- Add your résumé to /assets/resume.pdf, or change this link. -->
-
       </div>
+      <article class="experience" aria-labelledby="project-legal">
+        <div class="experience-summary reveal">
+          <p class="experience-date"><time datetime="2026-03">2026.03</time> — <time datetime="2026-08">2026.08</time></p>
+          <h3 class="experience-company" id="project-legal">农民工法律维权助手</h3>
+          <p class="experience-role">项目负责人</p>
+          <p class="project-award">腾讯开悟人工智能全球公开赛 · 国赛二等奖</p>
+          <p class="project-brief">针对欠薪、工伤等场景中诉求说不清、材料零散的问题，负责方案设计和核心开发，搭建微信小程序求助端及法律工作者 Web 工作台。</p>
+        </div>
+        <div class="experience-details">
+          <div class="experience-detail reveal"><h4>追问补齐诉求</h4><p>基于腾讯元器搭建工作流，先通过追问补齐用工主体、时间和金额。</p></div>
+          <div class="experience-detail reveal"><h4>材料解析与事实整理</h4><p>用 OCR 解析聊天截图、合同等材料，生成事实摘要和待补充清单。</p></div>
+          <div class="experience-detail reveal"><h4>知识库与人工核对</h4><p>整理劳动法规、办理流程和文书模板供知识库检索。用户可保存整理结果，需要进一步帮助时再提交工作台，由法律工作者核对、处理并反馈。</p></div>
+        </div>
+      </article>
+      <article class="experience" aria-labelledby="project-tourism">
+        <div class="experience-summary reveal">
+          <p class="experience-date"><time datetime="2025-08">2025.08</time> — <time datetime="2025-10">2025.10</time></p>
+          <h3 class="experience-company" id="project-tourism">海南省文旅助手</h3>
+          <p class="experience-role">AI 应用开发</p>
+          <p class="project-award">全球人工智能算法精英大赛 · 国家二等奖</p>
+        </div>
+        <div class="experience-details">
+          <div class="experience-detail reveal"><h4>多模态文旅咨询</h4><p>使用 Python、Flask 开发文旅应用，接入大模型及图像识别能力，提供景点问答、拍照识图和多轮咨询。</p></div>
+          <div class="experience-detail reveal"><h4>路线建议与数据整合</h4><p>结合天气、地图 / POI 数据和 SQL 存储，根据用户的出行偏好和天气信息生成路线建议。</p></div>
+        </div>
+      </article>
+    </div>
+  </section>
 
+  <section id="awards" aria-labelledby="awards-h">
+    <div class="inner">
+      <div class="sec-head reveal"><div><p class="eyebrow">COMPETITIONS &amp; AWARDS</p><h2 class="sec-title" id="awards-h">竞赛奖项</h2></div></div>
+      <ol class="award-list">
+        <li class="award-item reveal"><span class="award-number" aria-hidden="true">01</span><h3>腾讯开悟人工智能全球公开赛暨第十七届中国大学生服务外包创新创业大赛人工智能专项赛</h3><span class="award-level">国赛二等奖</span></li>
+        <li class="award-item reveal"><span class="award-number" aria-hidden="true">02</span><h3>全球人工智能算法精英大赛</h3><span class="award-level">国家二等奖</span></li>
+        <li class="award-item reveal"><span class="award-number" aria-hidden="true">03</span><h3>蓝桥杯 C++ 程序设计</h3><span class="award-level">省二等奖</span></li>
+        <li class="award-item reveal"><span class="award-number" aria-hidden="true">04</span><h3>ICAN</h3><span class="award-level">省二等奖</span></li>
+        <li class="award-item reveal"><span class="award-number" aria-hidden="true">05</span><h3>XICAN</h3><span class="award-level">二等奖</span></li>
+      </ol>
+    </div>
+  </section>
 
-
-      <div class="csgrid reveal" aria-label="Case studies"></div>
-
-      <div class="cases"></div>
+  <section id="campus" aria-labelledby="campus-h">
+    <div class="inner">
+      <div class="sec-head reveal"><div><p class="eyebrow">CAMPUS &amp; HONORS</p><h2 class="sec-title" id="campus-h">校园经历</h2></div></div>
+      <div class="campus-grid">
+        <div class="campus-group reveal"><h3>科研与校园工作</h3><ul class="campus-list">
+          <li><strong>科研助理</strong>海南大学计算机学院严善楷课题组</li>
+          <li><strong>行政助理</strong>网安学院教务处</li>
+          <li><strong>部长</strong>海南大学华为花粉高校俱乐部</li>
+        </ul></div>
+        <div class="campus-group reveal"><h3>荣誉与奖学金</h3><ul class="campus-list">
+          <li><strong>校三好学生</strong></li>
+          <li><strong>国家励志奖学金</strong></li>
+        </ul></div>
+      </div>
     </div>
   </section>
 
@@ -681,9 +775,6 @@
           <h2 class="sec-title" id="personal-h">联系</h2>
         </div>
       </div>
-
-      <!-- These are placeholder outbound links. Point them anywhere — or delete the ones you don't need. -->
-
 
     <div id="portfolio-contact"></div></div>
   </section>
@@ -760,11 +851,11 @@
   /* scroll-spy: active nav item + per-section background color shift */
   var scenes = {
     home:'#0b0b0d', who:'#0c0d12', thinking:'#0d0c10',
-    lab:'#0b0e0f', work:'#0e0c0d', personal:'#0d0b11'
+    lab:'#0b0e0f', work:'#0e0c0d', awards:'#0d0c10', campus:'#0b0e0f', personal:'#0d0b11'
   };
   var pops = {
     home:'#a3e635', who:'#a3e635', thinking:'#a3e635',
-    lab:'#a3e635', work:'#a3e635', personal:'#a3e635'
+    lab:'#a3e635', work:'#a3e635', awards:'#a3e635', campus:'#a3e635', personal:'#a3e635'
   };
   var vivid = ['#a3e635','#a3e635','#a3e635','#a3e635','#a3e635'];
   var vIdx = 0;
