@@ -34,7 +34,7 @@ The footer shares the section container width and gutters, aligning contact
 details with the Contact heading. The columns stack vertically on small screens.
 Resume content is supplied by the author: education at 海南大学, professional
 skills, the July–September 2026 internship at 国交空间信息科技有限公司, two
-projects, and five competition awards. The internship
+projects, and two competition awards. The internship
 now identifies the 海南海事局三沙大屏系统项目 and its supplied responsibilities.
 Education, experience, and projects use two columns with timeline-style rules;
 skills and awards use restrained editorial lists. All layouts
