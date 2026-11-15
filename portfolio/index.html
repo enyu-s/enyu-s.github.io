@@ -310,18 +310,11 @@
   .award-number{color:var(--pop);font-size:13px;letter-spacing:.08em;padding-top:5px;}
   .award-item h3{font-size:20px;font-weight:600;line-height:1.6;}
   .award-level{font-size:15px;color:var(--pop);line-height:1.8;white-space:nowrap;padding-top:3px;}
-  .campus-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px;}
-  .campus-group{min-width:0;border-top:1px solid var(--line);padding-top:28px;}
-  .campus-group h3{font-size:22px;margin-bottom:20px;}
-  .campus-list{list-style:none;}
-  .campus-list li{padding:18px 0;border-bottom:1px solid var(--line);font-size:16px;line-height:1.8;color:#aab0bd;}
-  .campus-list strong{display:block;font-weight:600;color:var(--ink);}
   @media (max-width:900px){
     .experience{grid-template-columns:1fr;gap:32px;margin-top:36px;padding-top:28px;}
     .experience-company{font-size:clamp(28px,6vw,36px);}
     .experience-details{padding-left:24px;}
-    .skill-grid,.campus-grid{grid-template-columns:1fr;gap:0;}
-    .campus-group + .campus-group{margin-top:32px;}
+    .skill-grid{grid-template-columns:1fr;gap:0;}
     .award-item{grid-template-columns:24px minmax(0,1fr);gap:8px 16px;padding:24px 0;}
     .award-level{grid-column:2;white-space:normal;}
   }
@@ -614,11 +607,10 @@
 
   <div class="nav">
     <a href="#who"><span class="led" aria-hidden="true"></span><span>教育</span></a>
-    <a href="#thinking"><span class="led" aria-hidden="true"></span><span>实习</span></a>
+    <a href="#thinking"><span class="led" aria-hidden="true"></span><span>履历</span></a>
     <a href="#lab"><span class="led" aria-hidden="true"></span><span>技能</span></a>
     <a href="#work"><span class="led" aria-hidden="true"></span><span>项目</span></a>
     <a href="#awards"><span class="led" aria-hidden="true"></span><span>竞赛</span></a>
-    <a href="#campus"><span class="led" aria-hidden="true"></span><span>校园</span></a>
     <a href="#personal"><span class="led" aria-hidden="true"></span><span>联系</span></a>
   </div>
 
@@ -684,7 +676,7 @@
       <div class="sec-head reveal">
         <div>
           <p class="eyebrow">BACKGROUND</p>
-          <h2 class="sec-title" id="thinking-h">实习经历</h2>
+          <h2 class="sec-title" id="thinking-h">履历</h2>
         </div>
       </div>
       <article class="experience reveal" aria-labelledby="experience-guojiao">
@@ -815,23 +807,6 @@
     </div>
   </section>
 
-  <section id="campus" aria-labelledby="campus-h">
-    <div class="inner">
-      <div class="sec-head reveal"><div><p class="eyebrow">CAMPUS &amp; HONORS</p><h2 class="sec-title" id="campus-h">校园经历</h2></div></div>
-      <div class="campus-grid">
-        <div class="campus-group reveal"><h3>科研与校园工作</h3><ul class="campus-list">
-          <li><strong>科研助理</strong>海南大学计算机学院严善楷课题组</li>
-          <li><strong>行政助理</strong>网安学院教务处</li>
-          <li><strong>部长</strong>海南大学华为花粉高校俱乐部</li>
-        </ul></div>
-        <div class="campus-group reveal"><h3>荣誉与奖学金</h3><ul class="campus-list">
-          <li><strong>校三好学生</strong></li>
-          <li><strong>国家励志奖学金</strong></li>
-        </ul></div>
-      </div>
-    </div>
-  </section>
-
   <!-- ====== personal (replaces Music) ====== -->
   <section id="personal" aria-labelledby="personal-h">
     <div class="inner">
@@ -917,11 +892,11 @@
   /* scroll-spy: active nav item + per-section background color shift */
   var scenes = {
     home:'#0b0b0d', who:'#0c0d12', thinking:'#0d0c10',
-    lab:'#0b0e0f', work:'#0e0c0d', awards:'#0d0c10', campus:'#0b0e0f', personal:'#0d0b11'
+    lab:'#0b0e0f', work:'#0e0c0d', awards:'#0d0c10', personal:'#0d0b11'
   };
   var pops = {
     home:'#a3e635', who:'#a3e635', thinking:'#a3e635',
-    lab:'#a3e635', work:'#a3e635', awards:'#a3e635', campus:'#a3e635', personal:'#a3e635'
+    lab:'#a3e635', work:'#a3e635', awards:'#a3e635', personal:'#a3e635'
   };
   var vivid = ['#a3e635','#a3e635','#a3e635','#a3e635','#a3e635'];
   var vIdx = 0;
